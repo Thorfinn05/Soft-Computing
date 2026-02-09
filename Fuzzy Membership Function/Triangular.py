@@ -23,6 +23,7 @@ def gaussian_membership(x, mean, sigma):
     return np.exp(-((x - mean) ** 2) / (2 * sigma * 2))
 
 x = np.linspace(0, 10, 1000)
+
 #v_triangular = np.vectorize(triangular_membership)
 a = int(input("Enter a: "))
 b = int(input("Enter b: "))
