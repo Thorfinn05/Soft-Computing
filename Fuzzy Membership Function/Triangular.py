@@ -12,9 +12,9 @@ def triangular_membership(x, a, b, c):
 x = np.linspace(0, 10, 1000)
 
 #v_triangular = np.vectorize(triangular_membership)
-a = int(input("Enter a: "))
-b = int(input("Enter b: "))
-c = int(input("Enter c: "))
+a = float(input("Enter a: "))
+b = float(input("Enter b: "))
+c = float(input("Enter c: "))
 y = triangular_membership(x, a, b, c)
 plt.plot(x, y, label=f"Triangular MF ({a}, {b}, {c})")
 plt.xlabel("x")
