@@ -9,16 +9,6 @@ def triangular_membership(x, a, b, c):
     # return 0.0
     return np.maximum(0, np.minimum((x-a)/(b-a), (c-x)/(c-b)))
 
-
-def trapezoidal_membership(x, a, b, c, d):
-    if a <= x < b:
-        return (x - a) / (b - a)
-    elif b <= x <= c:
-        return 1.0
-    elif c < x <= d:
-        return (d - x) / (d - c)
-    return 0.0
-
 def gaussian_membership(x, mean, sigma):
     return np.exp(-((x - mean) ** 2) / (2 * sigma * 2))
 
@@ -33,17 +23,6 @@ plt.plot(x, y, label=f"Triangular MF ({a}, {b}, {c})")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.title("Triangular Membership Function")
-plt.grid()
-plt.legend()
-plt.show()
-
-v_trap = np.vectorize(trapezoidal_membership)
-d = int(input("Enter d: "))
-y = v_trap(x,a,b,c,d)
-plt.plot(x, y, label=f"Trapezoidal MF ({a}, {b}, {c}, {d})")
-plt.xlabel("x")
-plt.ylabel("y")
-plt.title("Trapezoidal Membership Function")
 plt.grid()
 plt.legend()
 plt.show()
