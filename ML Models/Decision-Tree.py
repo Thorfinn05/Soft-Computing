@@ -1,9 +1,10 @@
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.metrics import accuracy_score, r2_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+from sklearn.tree import DecisionTreeClassifier, plot_tree
 
 X, y = load_iris(return_X_y=True)
 
