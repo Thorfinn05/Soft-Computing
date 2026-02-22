@@ -1,15 +1,21 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
-def triangular_membership(x, a,b,c,d):
-    # 
-    return np.maximum(0, np.minimum((x-a)/(b-a), (c-x)/(c-b)))
+R = np.array([[0.5, 0.7, 0.2],
+                  [0.8, 0.6, 0.9]])
 
-x = np.linspace(0, 10, 1000)
+S = np.array([[0.6, 0.3],
+                 [0.9, 0.4],
+                 [0.5, 0.8]])
 
-v_triangular = np.vectorize(triangular_membership)
-y = v_triangular(x, 2.0, 4.0, 8.0)
-plt.plot(x, y)
-plt.fill_between(x,y,alpha=0.3)
-plt.grid(); plt.show()
+result = []
 
+for i in range(len(R)):
+    res = []
+    for j in range(len(S[0])):
+        elList = []
+        for k in range(len(S)):
+            el = np.minimum(R[i][k], S[k][j])
+            elList.append(el)
+        res.append(max(elList))
+    result.append(res)
+print(np.array(result))
