@@ -11,7 +11,7 @@ setB = triangular_mf(x, 2, 6, 8)
 
 compB = 1 - setB
 
-alg_diff = np.maximum(0, setA - setB)
+alg_diff = setA * (1-setB)
 
 plt.plot(x, setA, label=f"setA", linestyle='dashed')
 plt.plot(x, setB, label=f"setB", linestyle='dashed')
