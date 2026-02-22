@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def gaussian_mf(x, mean, sigma):
-    return np.exp(-((x - mean) ** 2) / (2 * sigma * 2))
+    return np.exp(-((x - mean) ** 2) / (2 * sigma ** 2))
 
 x = np.linspace(0, 10, 1000)
 
