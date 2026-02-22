@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def triangular_membership(x, a, b, c):
-    # if a <= x <= b:
+    # if a < x <= b:
     #     return (x-a)/(b-a)
     # elif b < x < c:
     #     return (c-x)/(c-b)
