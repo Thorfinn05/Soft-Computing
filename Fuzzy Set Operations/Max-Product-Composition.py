@@ -1,20 +1,20 @@
 import numpy as np
 
-relAB = np.array([[0.5, 0.7, 0.2],
-                  [0.8, 0.6, 0.9]])
+R = [[0.5, 0.7, 0.2],
+     [0.8, 0.6, 0.9]]
 
-relBC = np.array([[0.6, 0.3],
-                 [0.9, 0.4],
-                 [0.5, 0.8]])
+S = [[0.6,0.3],
+     [0.9,0.4],
+     [0.5,0.8]]
 
 result = []
 
-for i in range (len(relAB)):
+for i in range (len(R)):
     res = []
-    for j in range(len(relBC[0])):
+    for j in range(len(S[0])):
         elList = []
-        for k in range(len(relBC)):
-            el=(relAB[i][k] * relBC[k][j])
+        for k in range(len(S)):
+            el=(R[i][k] * S[k][j])
             elList.append(el)
         res.append(max(elList))
     result.append(res)
